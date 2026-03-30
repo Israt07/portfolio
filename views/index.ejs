@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= data.personalInfo.name %> | <%= data.personalInfo.title %>
+    </title>
+    <meta name="description" content="Portfolio of <%= data.personalInfo.name %>, a <%= data.personalInfo.title %>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (Phosphor Icons for minimalist look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="/css/style.css?v=1.2">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+        <main>
+            <!-- Home / Hero Section -->
+            <section id="home" class="hero container fade-in">
+                <div class="hero-content">
+                    <h1 class="name">
+                        Hi, I'm <span class="text-glow"><%= data.personalInfo.name.split(' ')[0] %></span>
+                    </h1>
+                    <h2 class="title" style="font-size: 1.8rem; margin-top: 0.5rem; font-weight: 500;">
+                        <%= data.personalInfo.title %> <i class="ph ph-hand-waving" style="color:var(--accent-cyan); display: inline-block; margin-left: 6px;"></i>
+                    </h2>
+                    <p class="summary">
+                        <%- data.personalInfo.summary %>
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <i class="ph ph-code"></i>
+                            <div>
+                                <h4>2+</h4>
+                                <span>Years Experience</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="ph ph-rocket-launch"></i>
+                            <div>
+                                <h4>10+</h4>
+                                <span>Projects Completed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            View Details
+                        </a>
+                        <a href="#letstalk" class="btn btn-secondary">
+                            Let's Talk
+                        </a>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator">
+                    <span>SCROLL</span>
+                    <i class="ph ph-arrow-down"></i>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="container fade-in">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <% data.experience.forEach(exp=> { %>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content card">
+                                <div class="timeline-header">
+                                    <h3>
+                                        <%= exp.title %>
+                                    </h3>
+                                    <span class="company">
+                                        <%= exp.company %>
+                                            <%= exp.location ? ' | ' + exp.location : '' %>
+                                    </span>
+                                    <span class="date">
+                                        <%= exp.date %>
+                                    </span>
+                                </div>
+                                <ul class="duties">
+                                    <% exp.duties.forEach(duty=> { %>
+                                        <li>
+                                            <%= duty %>
+                                        </li>
+                                        <% }) %>
+                                </ul>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="container fade-in">
+                <h2 class="section-title">Notable Projects</h2>
+                <div class="projects-grid">
+                    <% data.projects.forEach(project=> { %>
+                        <div class="project-card card">
+                            <div class="project-top">
+                                <i class="ph ph-folder project-icon"></i>
+                                <div class="project-links">
+                                    <!-- Link placeholders -->
+                                </div>
+                            </div>
+                            <h3>
+                                <%= project.title %>
+                            </h3>
+                            <p>
+                                <%= project.description %>
+                            </p>
+                            <div class="project-tech">
+                                <% project.tech.forEach(tech=> { %>
+                                    <span>
+                                        <%= tech %>
+                                    </span>
+                                    <% }) %>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="container fade-in" style="padding-top: 8rem; padding-bottom: 4rem;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <p style="color: var(--text-secondary); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.5px;">
+                        Bringing ideas to life through code and creativity
+                    </p>
+                </div>
+                
+                <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                    <% 
+                        const skillIcons = {
+                            "Languages": "ph-code",
+                            "Frontend": "ph-palette",
+                            "Backend & DB": "ph-hard-drives",
+                            "DevOps & Tools": "ph-wrench"
+                        };
+                        const skillDescriptions = {
+                            "Languages": "The core programming languages I use to build robust software systems and applications.",
+                            "Frontend": "Building responsive, accessible, and performant user interfaces with modern frameworks and tools.",
+                            "Backend & DB": "Architecting scalable data layers, robust APIs, and secure server-side logic.",
+                            "DevOps & Tools": "Streamlining deployment pipelines, managing infrastructure, and automating workflows."
+                        };
+                        data.skills.forEach((skill, index) => { 
+                            const iconClass = skillIcons[skill.category] || "ph-code";
+                            const modalId = 'skill-modal-' + index;
+                    %>
+                    <div class="card skill-card interactive-card" onclick="openModal('<%= modalId %>')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                        <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
+                            <i class="ph <%= iconClass %>" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                        </div>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">
+                            <%= skill.category %>
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
+                            <%= skill.tags.join(', ') %>
+                        </p>
+                    </div>
+                    <% }) %>
+                </div>
+
+
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="container fade-in">
+                <h2 class="section-title">Education & Honors</h2>
+                <div class="education-card card">
+                    <div class="edu-header">
+                        <h3>
+                            <%= data.education.degree %>
+                        </h3>
+                        <span class="uni">
+                            <%= data.education.university %> | <%= data.education.location %>
+                        </span>
+                        <span class="date">
+                            <%= data.education.date %>
+                        </span>
+                    </div>
+                    <div class="honors">
+                        <i class="ph ph-medal"></i>
+                        <p><strong>Awards:</strong>
+                            <%= data.education.awards %>
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- Contact / Get in Touch Section -->
+            <section id="contact" class="container fade-in get-in-touch-section">
+                <div class="contact-header">
+                    <h2>Get in <span class="cyan-text">Touch</span></h2>
+                    <p>Let's connect! Feel free to reach out through any of these platforms.</p>
+                </div>
+                
+                <div class="social-grid">
+                    <a href="https://wa.me/<%= data.personalInfo.phone.replace(/\D/g, '') %>" target="_blank" class="social-card">
+                        <div class="social-icon" style="background: rgba(37, 211, 102, 0.1); color: #25D366;">
+                            <i class="ph ph-whatsapp-logo"></i>
+                        </div>
+                        <div class="social-info">
+                            <h4>WhatsApp</h4>
+                            <p><%= data.personalInfo.phone %></p>
+                        </div>
+                    </a>
+
+                    <a href="<%= data.personalInfo.github %>" target="_blank" class="social-card">
+                        <div class="social-icon" style="background: rgba(130, 80, 223, 0.1); color: #8250DF;">
+                            <i class="ph ph-github-logo"></i>
+                        </div>
+                        <div class="social-info">
+                            <h4>GitHub</h4>
+                            <p>@<%= data.personalInfo.github.split('/').pop() %></p>
+                        </div>
+                    </a>
+
+                    <a href="<%= data.personalInfo.linkedin %>" target="_blank" class="social-card">
+                        <div class="social-icon" style="background: rgba(10, 102, 194, 0.1); color: #0A66C2;">
+                            <i class="ph ph-linkedin-logo"></i>
+                        </div>
+                        <div class="social-info">
+                            <h4>LinkedIn</h4>
+                            <p>@<%= data.personalInfo.linkedin.split('/').pop() || data.personalInfo.linkedin.split('/').slice(-2)[0] %></p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:<%= data.personalInfo.email %>" class="social-card">
+                        <div class="social-icon" style="background: rgba(234, 67, 53, 0.1); color: #EA4335;">
+                            <i class="ph ph-envelope"></i>
+                        </div>
+                        <div class="social-info">
+                            <h4>Email</h4>
+                            <p><%= data.personalInfo.email %></p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Let's Talk Section -->
+            <section id="letstalk" class="container fade-in contact-section">
+                <div class="contact-header">
+                    <h2><span>Let's</span> <span class="cyan-text">Talk</span></h2>
+                    <p>Have a project in mind? Want to collaborate? Or just want to say hi? Drop me a message and I'll get back to you soon.</p>
+                </div>
+                
+                <div class="card contact-form-card">
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <i class="ph ph-paper-plane-tilt"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-footer">
+                    <p>Prefer social media? Check out my <a href="<%= data.personalInfo.linkedin %>" target="_blank">contact page</a> for more options.</p>
+                </div>
+            </section>
+        </main>
+
+        <a href="/resume.pdf" target="_blank" class="floating-cv"><i class="ph ph-download-simple"></i> Download CV</a>
+
+        <% 
+            const mdSkillIcons = {
+                "Languages": "ph-code",
+                "Frontend": "ph-palette",
+                "Backend & DB": "ph-hard-drives",
+                "DevOps & Tools": "ph-wrench"
+            };
+            const mdSkillDescriptions = {
+                "Languages": "The core programming languages I use to build robust software systems and applications.",
+                "Frontend": "Building responsive, accessible, and performant user interfaces with modern frameworks and tools.",
+                "Backend & DB": "Architecting scalable data layers, robust APIs, and secure server-side logic.",
+                "DevOps & Tools": "Streamlining deployment pipelines, managing infrastructure, and automating workflows."
+            };
+        %>
+        <% data.skills.forEach((skill, index) => { 
+            const iconClass = mdSkillIcons[skill.category] || "ph-code";
+            const modalId = 'skill-modal-' + index;
+        %>
+        <!-- Hidden Modal for <%= skill.category %> -->
+        <div id="<%= modalId %>" class="modal-overlay">
+            <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
+                <button class="modal-close" aria-label="Close modal" onclick="closeModal('<%= modalId %>', event)"><i class="ph ph-x"></i></button>
+                <div class="modal-header">
+                    <div class="modal-icon-large">
+                        <i class="ph <%= iconClass %>"></i>
+                    </div>
+                    <h2><%= skill.category %></h2>
+                    <p><%= mdSkillDescriptions[skill.category] %></p>
+                </div>
+                <div class="modal-body">
+                    <h4>TECHNOLOGIES & SKILLS</h4>
+                    <div class="modal-tech-grid">
+                        <% skill.tags.forEach(tag => { %>
+                            <div class="tech-card">
+                                <i class="ph ph-check-circle fill-cyan"></i>
+                                <span><%= tag %></span>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+
+        <%- include('partials/footer') %>
+
+            <script src="/js/script.js"></script>
+</body>
+
+</html>
