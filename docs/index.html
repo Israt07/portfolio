@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israt Jahan Bhuiyan | Full-Stack Software Engineer</title>
+    <meta name="description" content="Portfolio of Israt Jahan Bhuiyan, a Full-Stack Software Engineer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Icons (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+</head>
+
+<body>
+    <!-- Header / Nav -->
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-content container">
+            <a href="#home" class="logo">ISRAT</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#letstalk">Let's Talk</a></li>
+                <li><a href="#" id="theme-toggle" aria-label="Toggle Theme" style="font-size: 1.2rem; display: flex; align-items: center;"><i class="ph ph-moon"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero container fade-in">
+            <div class="hero-content">
+                <h1 class="name">
+                    Hi, I'm <span class="text-glow">Israt</span>
+                </h1>
+                <h2 class="title" style="font-size: 1.8rem; margin-top: 0.5rem; font-weight: 500;">
+                    Full-Stack Software Engineer <i class="ph ph-hand-waving" style="color:var(--accent-cyan); display: inline-block; margin-left: 6px;"></i>
+                </h2>
+                <p class="summary">
+                    With 2 years of experience in the fintech sector, I focus on building scalable monorepo systems and secure, high-performance applications using <strong>React</strong>, <strong>Angular</strong>, and <strong>Node.js</strong>.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <i class="ph ph-code"></i>
+                        <div>
+                            <h4>2+</h4>
+                            <span>Years Experience</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="ph ph-rocket-launch"></i>
+                        <div>
+                            <h4>10+</h4>
+                            <span>Projects Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Details</a>
+                    <a href="#letstalk" class="btn btn-secondary">Let's Talk</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <i class="ph ph-arrow-down"></i>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="container fade-in">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header">
+                            <h3>Associate Software Engineer</h3>
+                            <span class="company">Finhero | Tanjung Tokong, Malaysia</span>
+                            <span class="date">Sep 2024 – Present</span>
+                        </div>
+                        <ul class="duties">
+                            <li>Set up and managed a TypeScript monorepo to manage multiple financial products, including platforms for car dealers (RHB), iPay88, and Biztory, and built an auto loan system using Node.js, TS, and MySQL.</li>
+                            <li>Built a custom form-building tool using JSON and React Hook Forms to save time on RHB Personal Loan and Biztory projects.</li>
+                            <li>Led the end-to-end development of the "Device as a Service" (DaaS) platform for ICT Zone from scratch.</li>
+                            <li>Enhanced system security by implementing Azure SAS tokens, JWT/OAuth2, and migrating legacy PHP modules to Node.js microservices.</li>
+                            <li>Integrated CI/CD pipelines via GitHub Actions, maintained Docker environments, and increased test coverage by 60% with Cypress.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header">
+                            <h3>Software Engineer Intern</h3>
+                            <span class="company">Finhero</span>
+                            <span class="date">Mar 2024 – Sep 2024</span>
+                        </div>
+                        <ul class="duties">
+                            <li>Built and maintained B2B web applications using AdonisJS for client account management and analytics reporting.</li>
+                            <li>Created a Python-based automation tool to analyze PDFs, extracting data automatically.</li>
+                            <li>Developed a secure API for real-time financial data integration.</li>
+                            <li>Contributed to an SME lending management system with Angular and Tailwind CSS, optimizing the MySQL DB structure.</li>
+                            <li>Documented API endpoints and architectures for cross-functional teams.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container fade-in">
+            <h2 class="section-title">Notable Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card card">
+                    <div class="project-top">
+                        <i class="ph ph-folder project-icon"></i>
+                        <div class="project-links"></div>
+                    </div>
+                    <h3>International Student Services App</h3>
+                    <p>Designed a Kotlin-based mobile application with Firebase integration for real-time data storage and secure user authentication, streamlining access to vital info for foreign students.</p>
+                    <div class="project-tech">
+                        <span>Kotlin</span><span>Firebase</span><span>Android</span>
+                    </div>
+                </div>
+
+                <div class="project-card card">
+                    <div class="project-top">
+                        <i class="ph ph-folder project-icon"></i>
+                        <div class="project-links"></div>
+                    </div>
+                    <h3>iCondo</h3>
+                    <p>Built an application automating condominium management tasks like parcel collection, facility booking, and visitor management, improving operational efficiency.</p>
+                    <div class="project-tech">
+                        <span>Android Studio</span><span>JavaScript</span><span>MySQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card card">
+                    <div class="project-top">
+                        <i class="ph ph-folder project-icon"></i>
+                        <div class="project-links"></div>
+                    </div>
+                    <h3>HelpConnect</h3>
+                    <p>Developed a PHP-based web app connecting elderly individuals with volunteers, focusing on improving social well-being through community resource integration.</p>
+                    <div class="project-tech">
+                        <span>PHP</span><span>Web</span>
+                    </div>
+                </div>
+
+                <div class="project-card card">
+                    <div class="project-top">
+                        <i class="ph ph-folder project-icon"></i>
+                        <div class="project-links"></div>
+                    </div>
+                    <h3>Object Detection</h3>
+                    <p>Implemented object detection using TensorFlow and SSD MobileNet V3 architecture for real-time detection in images and videos.</p>
+                    <div class="project-tech">
+                        <span>AI/ML</span><span>TensorFlow</span><span>Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card card">
+                    <div class="project-top">
+                        <i class="ph ph-folder project-icon"></i>
+                        <div class="project-links"></div>
+                    </div>
+                    <h3>Clothing Store Management</h3>
+                    <p>Created a system automating product management and sales tracking to reduce manual data entry and improve efficiency.</p>
+                    <div class="project-tech">
+                        <span>C++</span><span>MySQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card card">
+                    <div class="project-top">
+                        <i class="ph ph-folder project-icon"></i>
+                        <div class="project-links"></div>
+                    </div>
+                    <h3>Plant Ordering System</h3>
+                    <p>Built a Flutter application facilitating plant sales, management, and monitoring, providing a smooth UX and transaction transparency.</p>
+                    <div class="project-tech">
+                        <span>Flutter</span><span>Dart</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="container fade-in" style="padding-top: 8rem; padding-bottom: 4rem;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <p style="color: var(--text-secondary); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.5px;">
+                    Bringing ideas to life through code and creativity
+                </p>
+            </div>
+
+            <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+
+                <div class="card skill-card interactive-card" onclick="openModal('skill-modal-0')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                    <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
+                        <i class="ph ph-code" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                    </div>
+                    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">Languages</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">TypeScript, JavaScript, Java, Kotlin, Python, PHP, C++, HTML, CSS</p>
+                </div>
+
+                <div class="card skill-card interactive-card" onclick="openModal('skill-modal-1')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                    <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
+                        <i class="ph ph-palette" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                    </div>
+                    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">Frontend</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">React, Angular, Next.js, Vue.js, Flutter, Tailwind CSS, React Hook Form</p>
+                </div>
+
+                <div class="card skill-card interactive-card" onclick="openModal('skill-modal-2')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                    <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
+                        <i class="ph ph-hard-drives" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                    </div>
+                    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">Backend &amp; DB</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">Node.js, Express.js, AdonisJS, MySQL, PostgreSQL, TypeORM</p>
+                </div>
+
+                <div class="card skill-card interactive-card" onclick="openModal('skill-modal-3')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                    <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
+                        <i class="ph ph-wrench" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                    </div>
+                    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">DevOps &amp; Tools</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">Git, GitHub Actions, Docker, CI/CD, JWT / OAuth2, Firebase, TensorFlow, Figma</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="container fade-in">
+            <h2 class="section-title">Education &amp; Honors</h2>
+            <div class="education-card card">
+                <div class="edu-header">
+                    <h3>Bachelor of Computer Science (Software Development)</h3>
+                    <span class="uni">Universiti Teknikal Malaysia Melaka (UTeM) | Melaka, Malaysia</span>
+                    <span class="date">Graduated: 2024</span>
+                </div>
+                <div class="honors">
+                    <i class="ph ph-medal"></i>
+                    <p><strong>Awards:</strong> Achieved recognition for academic excellence by being placed on the Dean's List for two consecutive semesters.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Contact / Get in Touch Section -->
+        <section id="contact" class="container fade-in get-in-touch-section">
+            <div class="contact-header">
+                <h2>Get in <span class="cyan-text">Touch</span></h2>
+                <p>Let's connect! Feel free to reach out through any of these platforms.</p>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://wa.me/60160201350" target="_blank" class="social-card">
+                    <div class="social-icon" style="background: rgba(37, 211, 102, 0.1); color: #25D366;">
+                        <i class="ph ph-whatsapp-logo"></i>
+                    </div>
+                    <div class="social-info">
+                        <h4>WhatsApp</h4>
+                        <p>01960201350</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Israt07" target="_blank" class="social-card">
+                    <div class="social-icon" style="background: rgba(130, 80, 223, 0.1); color: #8250DF;">
+                        <i class="ph ph-github-logo"></i>
+                    </div>
+                    <div class="social-info">
+                        <h4>GitHub</h4>
+                        <p>@Israt07</p>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/israt-jahan-bhuiyan-769116272" target="_blank" class="social-card">
+                    <div class="social-icon" style="background: rgba(10, 102, 194, 0.1); color: #0A66C2;">
+                        <i class="ph ph-linkedin-logo"></i>
+                    </div>
+                    <div class="social-info">
+                        <h4>LinkedIn</h4>
+                        <p>@israt-jahan-bhuiyan-769116272</p>
+                    </div>
+                </a>
+
+                <a href="mailto:isratjahanbhuiyan79@gmail.com" class="social-card">
+                    <div class="social-icon" style="background: rgba(234, 67, 53, 0.1); color: #EA4335;">
+                        <i class="ph ph-envelope"></i>
+                    </div>
+                    <div class="social-info">
+                        <h4>Email</h4>
+                        <p>isratjahanbhuiyan79@gmail.com</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Let's Talk Section -->
+        <section id="letstalk" class="container fade-in contact-section">
+            <div class="contact-header">
+                <h2><span>Let's</span> <span class="cyan-text">Talk</span></h2>
+                <p>Have a project in mind? Want to collaborate? Or just want to say hi? Drop me a message and I'll get back to you soon.</p>
+            </div>
+
+            <div class="card contact-form-card">
+                <form id="contactForm" class="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <i class="ph ph-paper-plane-tilt"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-footer">
+                <p>Prefer social media? Check out my <a href="https://linkedin.com/in/israt-jahan-bhuiyan-769116272" target="_blank">contact page</a> for more options.</p>
+            </div>
+        </section>
+    </main>
+
+    <a href="/resume.pdf" target="_blank" class="floating-cv"><i class="ph ph-download-simple"></i> Download CV</a>
+
+    <!-- Skill Modals -->
+    <div id="skill-modal-0" class="modal-overlay">
+        <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
+            <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-0', event)"><i class="ph ph-x"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon-large"><i class="ph ph-code"></i></div>
+                <h2>Languages</h2>
+                <p>The core programming languages I use to build robust software systems and applications.</p>
+            </div>
+            <div class="modal-body">
+                <h4>TECHNOLOGIES &amp; SKILLS</h4>
+                <div class="modal-tech-grid">
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>TypeScript</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>JavaScript</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Java</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Kotlin</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Python</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>PHP</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>C++</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>HTML</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>CSS</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skill-modal-1" class="modal-overlay">
+        <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
+            <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-1', event)"><i class="ph ph-x"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon-large"><i class="ph ph-palette"></i></div>
+                <h2>Frontend</h2>
+                <p>Building responsive, accessible, and performant user interfaces with modern frameworks and tools.</p>
+            </div>
+            <div class="modal-body">
+                <h4>TECHNOLOGIES &amp; SKILLS</h4>
+                <div class="modal-tech-grid">
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>React</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Angular</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Next.js</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Vue.js</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Flutter</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Tailwind CSS</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>React Hook Form</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skill-modal-2" class="modal-overlay">
+        <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
+            <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-2', event)"><i class="ph ph-x"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon-large"><i class="ph ph-hard-drives"></i></div>
+                <h2>Backend &amp; DB</h2>
+                <p>Architecting scalable data layers, robust APIs, and secure server-side logic.</p>
+            </div>
+            <div class="modal-body">
+                <h4>TECHNOLOGIES &amp; SKILLS</h4>
+                <div class="modal-tech-grid">
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Node.js</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Express.js</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>AdonisJS</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>MySQL</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>PostgreSQL</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>TypeORM</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skill-modal-3" class="modal-overlay">
+        <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
+            <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-3', event)"><i class="ph ph-x"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon-large"><i class="ph ph-wrench"></i></div>
+                <h2>DevOps &amp; Tools</h2>
+                <p>Streamlining deployment pipelines, managing infrastructure, and automating workflows.</p>
+            </div>
+            <div class="modal-body">
+                <h4>TECHNOLOGIES &amp; SKILLS</h4>
+                <div class="modal-tech-grid">
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Git</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>GitHub Actions</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Docker</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>CI/CD</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>JWT / OAuth2</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Firebase</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>TensorFlow</span></div>
+                    <div class="tech-card"><i class="ph ph-check-circle fill-cyan"></i><span>Figma</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>Designed &amp; Built for Israt Jahan Bhuiyan</p>
+            <p>📞 01960201350 | ✉️ <a href="mailto:isratjahanbhuiyan79@gmail.com" style="color: inherit; text-decoration: none;">isratjahanbhuiyan79@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
