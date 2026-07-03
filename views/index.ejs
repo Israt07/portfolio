@@ -137,12 +137,13 @@
 
             <!-- Skills Section -->
             <section id="skills" class="container fade-in" style="padding-top: 8rem; padding-bottom: 4rem;">
-                <h2 class="section-title">Skills</h2>
-                <p style="color: var(--text-secondary); font-size: 1.1rem; text-align: center; margin-bottom: 3rem;">
-                    Bringing ideas to life through code and creativity
-                </p>
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <p style="color: var(--text-secondary); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.5px;">
+                        Bringing ideas to life through code and creativity
+                    </p>
+                </div>
                 
-                <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
                     <% 
                         const skillIcons = {
                             "Languages": "ph-code",
@@ -158,30 +159,23 @@
                         };
                         data.skills.forEach((skill, index) => { 
                             const iconClass = skillIcons[skill.category] || "ph-code";
+                            const modalId = 'skill-modal-' + index;
                     %>
-                    <div class="card skill-card" style="padding: 2.5rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 14px; flex-shrink: 0;">
-                                <i class="ph <%= iconClass %>" style="color: var(--accent-cyan); font-size: 1.5rem;"></i>
-                            </div>
-                            <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700;">
-                                <%= skill.category %>
-                            </h3>
+                    <div class="card skill-card interactive-card" onclick="openModal('<%= modalId %>')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                        <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
+                            <i class="ph <%= iconClass %>" style="color: var(--accent-cyan); font-size: 2rem;"></i>
                         </div>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                            <%= skillDescriptions[skill.category] %>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">
+                            <%= skill.category %>
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
+                            <%= skill.tags.join(', ') %>
                         </p>
-                        <div class="modal-tech-grid">
-                            <% skill.tags.forEach(tag => { %>
-                                <div class="tech-card">
-                                    <i class="ph ph-check-circle fill-cyan"></i>
-                                    <span><%= tag %></span>
-                                </div>
-                            <% }) %>
-                        </div>
                     </div>
                     <% }) %>
                 </div>
+
+
             </section>
 
             <!-- Education Section -->
@@ -292,7 +286,49 @@
 
         <a href="resume.pdf" target="_blank" class="floating-cv"><i class="ph ph-download-simple"></i> Download CV</a>
 
-
+        <% 
+            const mdSkillIcons = {
+                "Languages": "ph-code",
+                "Frontend": "ph-palette",
+                "Backend & DB": "ph-hard-drives",
+                "DevOps & Tools": "ph-wrench"
+            };
+            const mdSkillDescriptions = {
+                "Languages": "The core programming languages I use to build robust software systems and applications.",
+                "Frontend": "Building responsive, accessible, and performant user interfaces with modern frameworks and tools.",
+                "Backend & DB": "Architecting scalable data layers, robust APIs, and secure server-side logic.",
+                "DevOps & Tools": "Streamlining deployment pipelines, managing infrastructure, and automating workflows."
+            };
+        %>
+        <% data.skills.forEach((skill, index) => { 
+            const iconClass = mdSkillIcons[skill.category] || "ph-code";
+            const modalId = 'skill-modal-' + index;
+        %>
+        <!-- Hidden Modal for <%= skill.category %> -->
+        <div id="<%= modalId %>" class="modal-overlay">
+            <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
+                <button class="modal-close" aria-label="Close modal" onclick="closeModal('<%= modalId %>', event)"><i class="ph ph-x"></i></button>
+                <div class="modal-header">
+                    <div class="modal-icon-large">
+                        <i class="ph <%= iconClass %>"></i>
+                    </div>
+                    <h2><%= skill.category %></h2>
+                    <p><%= mdSkillDescriptions[skill.category] %></p>
+                </div>
+                <div class="modal-body">
+                    <h4>TECHNOLOGIES & SKILLS</h4>
+                    <div class="modal-tech-grid">
+                        <% skill.tags.forEach(tag => { %>
+                            <div class="tech-card">
+                                <i class="ph ph-check-circle fill-cyan"></i>
+                                <span><%= tag %></span>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
 
         <%- include('partials/footer') %>
 
