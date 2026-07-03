@@ -211,13 +211,18 @@
                 </div>
                 
                 <div class="social-grid">
-                    <a href="https://wa.me/<%= data.personalInfo.phone.replace(/\D/g, '') %>" target="_blank" class="social-card">
+                    <% 
+                      const pRaw = data.personalInfo.phone.replace(/\D/g, ''); 
+                      const p1 = pRaw.substring(0, 4); 
+                      const p2 = pRaw.substring(4);
+                    %>
+                    <a href="#" target="_blank" class="social-card protected-phone" data-wa="true" data-p1="<%= p1 %>" data-p2="<%= p2 %>" data-display="<%= data.personalInfo.phone %>">
                         <div class="social-icon" style="background: rgba(37, 211, 102, 0.1); color: #25D366;">
                             <i class="ph ph-whatsapp-logo"></i>
                         </div>
                         <div class="social-info">
                             <h4>WhatsApp</h4>
-                            <p><%= data.personalInfo.phone %></p>
+                            <p class="update-text">Loading...</p>
                         </div>
                     </a>
 
@@ -241,13 +246,14 @@
                         </div>
                     </a>
 
-                    <a href="mailto:<%= data.personalInfo.email %>" class="social-card">
+                    <% const [eUser, eDomain] = data.personalInfo.email.split('@'); %>
+                    <a href="#" class="social-card protected-email" data-u="<%= eUser %>" data-d="<%= eDomain %>">
                         <div class="social-icon" style="background: rgba(234, 67, 53, 0.1); color: #EA4335;">
                             <i class="ph ph-envelope"></i>
                         </div>
                         <div class="social-info">
                             <h4>Email</h4>
-                            <p><%= data.personalInfo.email %></p>
+                            <p class="update-text">Loading...</p>
                         </div>
                     </a>
                 </div>
