@@ -4,7 +4,7 @@ const portfolioData = {
         title: "Full-Stack Software Engineer",
         summary: "With 2 years of experience in the fintech sector, I focus on building scalable monorepo systems and secure, high-performance applications using <strong>React</strong>, <strong>Angular</strong>, and <strong>Node.js</strong>.",
         email: "isratjahanbhuiyan79@gmail.com",
-        phone: "01960201350",
+        phone: "01883235456",
         linkedin: "https://linkedin.com/in/israt-jahan-bhuiyan-769116272",
         github: "https://github.com/Israt07"
     },
