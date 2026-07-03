@@ -13,7 +13,7 @@ const portfolioData = {
             title: "Associate Software Engineer",
             company: "Finhero",
             location: "Tanjung Tokong, Malaysia",
-            date: "Sep 2024 – Present",
+            date: "Sep 2024 – March 2026",
             duties: [
                 "Set up and managed a TypeScript monorepo to manage multiple financial products, including platforms for car dealers (RHB), iPay88, and Biztory, and built an auto loan system using Node.js, TS, and MySQL.",
                 "Built a custom form-building tool using JSON and React Hook Forms to save time on RHB Personal Loan and Biztory projects.",
