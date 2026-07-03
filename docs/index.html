@@ -357,65 +357,232 @@
 
             <!-- Skills Section -->
             <section id="skills" class="container fade-in" style="padding-top: 8rem; padding-bottom: 4rem;">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <p style="color: var(--text-secondary); font-size: 1.2rem; font-weight: 400; letter-spacing: 0.5px;">
-                        Bringing ideas to life through code and creativity
-                    </p>
-                </div>
+                <h2 class="section-title">Skills</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; text-align: center; margin-bottom: 3rem;">
+                    Bringing ideas to life through code and creativity
+                </p>
                 
-                <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
                     
-                    <div class="card skill-card interactive-card" onclick="openModal('skill-modal-0')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
-                        <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
-                            <i class="ph ph-code" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                    <div class="card skill-card" style="padding: 2.5rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 14px; flex-shrink: 0;">
+                                <i class="ph ph-code" style="color: var(--accent-cyan); font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700;">
+                                Languages
+                            </h3>
                         </div>
-                        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">
-                            Languages
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
-                            TypeScript, JavaScript, Java, Kotlin, Python, PHP, C++, HTML, CSS
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            The core programming languages I use to build robust software systems and applications.
                         </p>
+                        <div class="modal-tech-grid">
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>TypeScript</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Java</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Kotlin</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Python</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>PHP</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>C++</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>HTML</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>CSS</span>
+                                </div>
+                            
+                        </div>
                     </div>
                     
-                    <div class="card skill-card interactive-card" onclick="openModal('skill-modal-1')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
-                        <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
-                            <i class="ph ph-palette" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                    <div class="card skill-card" style="padding: 2.5rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 14px; flex-shrink: 0;">
+                                <i class="ph ph-palette" style="color: var(--accent-cyan); font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700;">
+                                Frontend
+                            </h3>
                         </div>
-                        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">
-                            Frontend
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
-                            React, Angular, Next.js, Vue.js, Flutter, Tailwind CSS, React Hook Form
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Building responsive, accessible, and performant user interfaces with modern frameworks and tools.
                         </p>
+                        <div class="modal-tech-grid">
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>React</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Angular</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Next.js</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Vue.js</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Flutter</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Tailwind CSS</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>React Hook Form</span>
+                                </div>
+                            
+                        </div>
                     </div>
                     
-                    <div class="card skill-card interactive-card" onclick="openModal('skill-modal-2')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
-                        <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
-                            <i class="ph ph-hard-drives" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                    <div class="card skill-card" style="padding: 2.5rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 14px; flex-shrink: 0;">
+                                <i class="ph ph-hard-drives" style="color: var(--accent-cyan); font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700;">
+                                Backend &amp; DB
+                            </h3>
                         </div>
-                        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">
-                            Backend &amp; DB
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
-                            Node.js, Express.js, AdonisJS, MySQL, PostgreSQL, TypeORM
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Architecting scalable data layers, robust APIs, and secure server-side logic.
                         </p>
+                        <div class="modal-tech-grid">
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Node.js</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Express.js</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>AdonisJS</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>MySQL</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>TypeORM</span>
+                                </div>
+                            
+                        </div>
                     </div>
                     
-                    <div class="card skill-card interactive-card" onclick="openModal('skill-modal-3')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
-                        <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
-                            <i class="ph ph-wrench" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                    <div class="card skill-card" style="padding: 2.5rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 14px; flex-shrink: 0;">
+                                <i class="ph ph-wrench" style="color: var(--accent-cyan); font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700;">
+                                DevOps &amp; Tools
+                            </h3>
                         </div>
-                        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">
-                            DevOps &amp; Tools
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
-                            Git, GitHub Actions, Docker, CI/CD, JWT / OAuth2, Firebase, TensorFlow, Figma
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Streamlining deployment pipelines, managing infrastructure, and automating workflows.
                         </p>
+                        <div class="modal-tech-grid">
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Git</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>GitHub Actions</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Docker</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>CI/CD</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>JWT / OAuth2</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Firebase</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>TensorFlow</span>
+                                </div>
+                            
+                                <div class="tech-card">
+                                    <i class="ph ph-check-circle fill-cyan"></i>
+                                    <span>Figma</span>
+                                </div>
+                            
+                        </div>
                     </div>
                     
                 </div>
-
-
             </section>
 
             <!-- Education Section -->
@@ -522,238 +689,7 @@
 
         <a href="resume.pdf" target="_blank" class="floating-cv"><i class="ph ph-download-simple"></i> Download CV</a>
 
-        
-        
-        <!-- Hidden Modal for Languages -->
-        <div id="skill-modal-0" class="modal-overlay">
-            <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
-                <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-0', event)"><i class="ph ph-x"></i></button>
-                <div class="modal-header">
-                    <div class="modal-icon-large">
-                        <i class="ph ph-code"></i>
-                    </div>
-                    <h2>Languages</h2>
-                    <p>The core programming languages I use to build robust software systems and applications.</p>
-                </div>
-                <div class="modal-body">
-                    <h4>TECHNOLOGIES & SKILLS</h4>
-                    <div class="modal-tech-grid">
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>TypeScript</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>JavaScript</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Java</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Kotlin</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Python</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>PHP</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>C++</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>HTML</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>CSS</span>
-                            </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Hidden Modal for Frontend -->
-        <div id="skill-modal-1" class="modal-overlay">
-            <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
-                <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-1', event)"><i class="ph ph-x"></i></button>
-                <div class="modal-header">
-                    <div class="modal-icon-large">
-                        <i class="ph ph-palette"></i>
-                    </div>
-                    <h2>Frontend</h2>
-                    <p>Building responsive, accessible, and performant user interfaces with modern frameworks and tools.</p>
-                </div>
-                <div class="modal-body">
-                    <h4>TECHNOLOGIES & SKILLS</h4>
-                    <div class="modal-tech-grid">
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>React</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Angular</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Next.js</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Vue.js</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Flutter</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Tailwind CSS</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>React Hook Form</span>
-                            </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Hidden Modal for Backend &amp; DB -->
-        <div id="skill-modal-2" class="modal-overlay">
-            <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
-                <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-2', event)"><i class="ph ph-x"></i></button>
-                <div class="modal-header">
-                    <div class="modal-icon-large">
-                        <i class="ph ph-hard-drives"></i>
-                    </div>
-                    <h2>Backend &amp; DB</h2>
-                    <p>Architecting scalable data layers, robust APIs, and secure server-side logic.</p>
-                </div>
-                <div class="modal-body">
-                    <h4>TECHNOLOGIES & SKILLS</h4>
-                    <div class="modal-tech-grid">
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Node.js</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Express.js</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>AdonisJS</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>MySQL</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>PostgreSQL</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>TypeORM</span>
-                            </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Hidden Modal for DevOps &amp; Tools -->
-        <div id="skill-modal-3" class="modal-overlay">
-            <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
-                <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-3', event)"><i class="ph ph-x"></i></button>
-                <div class="modal-header">
-                    <div class="modal-icon-large">
-                        <i class="ph ph-wrench"></i>
-                    </div>
-                    <h2>DevOps &amp; Tools</h2>
-                    <p>Streamlining deployment pipelines, managing infrastructure, and automating workflows.</p>
-                </div>
-                <div class="modal-body">
-                    <h4>TECHNOLOGIES & SKILLS</h4>
-                    <div class="modal-tech-grid">
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Git</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>GitHub Actions</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Docker</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>CI/CD</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>JWT / OAuth2</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Firebase</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>TensorFlow</span>
-                            </div>
-                        
-                            <div class="tech-card">
-                                <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Figma</span>
-                            </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+
 
         <footer>
     <div class="container footer-content">
