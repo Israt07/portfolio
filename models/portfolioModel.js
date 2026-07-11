@@ -37,6 +37,16 @@ const portfolioData = {
     ],
     projects: [
         {
+            title: "Device as a Service (DaaS) Platform",
+            description: "End-to-end development of a comprehensive platform for ICT Zone, enabling device lifecycle management and subscription-based financing workflows.",
+            tech: ["Node.js", "TypeScript", "React", "MySQL", "Docker"]
+        },
+        {
+            title: "SME Lending Management System",
+            description: "Contributed to the frontend architecture and MySQL database optimization for a lending management system serving small and medium enterprises.",
+            tech: ["Angular", "Tailwind CSS", "MySQL", "AdonisJS"]
+        },
+        {
             title: "International Student Services App",
             description: "Designed a Kotlin-based mobile application with Firebase integration for real-time data storage and secure user authentication, streamlining access to vital info for foreign students.",
             tech: ["Kotlin", "Firebase", "Android"],
