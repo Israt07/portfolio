@@ -39,32 +39,38 @@ const portfolioData = {
         {
             title: "International Student Services App",
             description: "Designed a Kotlin-based mobile application with Firebase integration for real-time data storage and secure user authentication, streamlining access to vital info for foreign students.",
-            tech: ["Kotlin", "Firebase", "Android"]
+            tech: ["Kotlin", "Firebase", "Android"],
+            github: "https://github.com/Israt07/International-Student-Service-Application-Admin-"
         },
         {
             title: "iCondo",
             description: "Built an application automating condominium management tasks like parcel collection, facility booking, and visitor management, improving operational efficiency.",
-            tech: ["Android Studio", "JavaScript", "MySQL"]
+            tech: ["Android Studio", "JavaScript", "MySQL"],
+            github: "https://github.com/Israt07/Condominium-Management-Application-main"
         },
         {
             title: "HelpConnect",
             description: "Developed a PHP-based web app connecting elderly individuals with volunteers, focusing on improving social well-being through community resource integration.",
-            tech: ["PHP", "Web"]
+            tech: ["PHP", "Web"],
+            github: "https://github.com/Israt07/HelpConnect-Project"
         },
         {
             title: "Object Detection",
             description: "Implemented object detection using TensorFlow and SSD MobileNet V3 architecture for real-time detection in images and videos.",
-            tech: ["AI/ML", "TensorFlow", "Python"]
+            tech: ["AI/ML", "TensorFlow", "Python"],
+            github: "https://github.com/Israt07/object-detection"
         },
         {
             title: "Clothing Store Management",
             description: "Created a system automating product management and sales tracking to reduce manual data entry and improve efficiency.",
-            tech: ["C++", "MySQL"]
+            tech: ["C++", "MySQL"],
+            github: "https://github.com/Israt07/Clothing-Store-Management-System"
         },
         {
             title: "Plant Ordering System",
             description: "Built a Flutter application facilitating plant sales, management, and monitoring, providing a smooth UX and transaction transparency.",
-            tech: ["Flutter", "Dart"]
+            tech: ["Flutter", "Dart"],
+            github: "https://github.com/Israt07/plant-ordering-system"
         }
     ],
     skills: [
