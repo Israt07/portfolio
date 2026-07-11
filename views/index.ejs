@@ -109,15 +109,19 @@
             <section id="projects" class="container fade-in">
                 <h2 class="section-title">Notable Projects</h2>
                 <div class="projects-grid">
-                    <% data.projects.forEach(project=> { %>
+<% data.projects.forEach(project=> { %>
                         <div class="project-card card">
                             <div class="project-top">
                                 <i class="ph ph-folder project-icon"></i>
                                 <div class="project-links">
-                                    <!-- Link placeholders -->
+                                    <% if (project.github) { %>
+                                        <a href="<%= project.github %>" target="_blank" aria-label="View project on GitHub">
+                                            <i class="ph ph-github-logo"></i>
+                                        </a>
+                                    <% } %>
                                 </div>
                             </div>
-                            <h3>
+<h3>
                                 <%= project.title %>
                             </h3>
                             <p>
