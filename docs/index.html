@@ -505,7 +505,31 @@
                             DevOps &amp; Tools
                         </h3>
                         <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
-                            Git, GitHub Actions, Docker, CI/CD, JWT / OAuth2, Firebase, TensorFlow, Figma
+                            Git, GitHub Actions, Docker, CI/CD, JWT / OAuth2, Firebase, Figma
+                        </p>
+                    </div>
+                    
+                    <div class="card skill-card interactive-card" onclick="openModal('skill-modal-4')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                        <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
+                            <i class="ph ph-code" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                        </div>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">
+                            AI/ML
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
+                            TensorFlow, SSD MobileNet V3, Object Detection
+                        </p>
+                    </div>
+                    
+                    <div class="card skill-card interactive-card" onclick="openModal('skill-modal-5')" style="display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                        <div class="icon-container" style="background: rgba(0, 229, 255, 0.08); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 20px; margin-bottom: 1.5rem;">
+                            <i class="ph ph-code" style="color: var(--accent-cyan); font-size: 2rem;"></i>
+                        </div>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700;">
+                            Platforms
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center;">
+                            Windows Server, Linux, Android Studio
                         </p>
                     </div>
                     
@@ -837,12 +861,77 @@
                         
                             <div class="tech-card">
                                 <i class="ph ph-check-circle fill-cyan"></i>
+                                <span>Figma</span>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hidden Modal for AI/ML -->
+        <div id="skill-modal-4" class="modal-overlay">
+            <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
+                <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-4', event)"><i class="ph ph-x"></i></button>
+                <div class="modal-header">
+                    <div class="modal-icon-large">
+                        <i class="ph ph-code"></i>
+                    </div>
+                    <h2>AI/ML</h2>
+                    <p></p>
+                </div>
+                <div class="modal-body">
+                    <h4>TECHNOLOGIES & SKILLS</h4>
+                    <div class="modal-tech-grid">
+                        
+                            <div class="tech-card">
+                                <i class="ph ph-check-circle fill-cyan"></i>
                                 <span>TensorFlow</span>
                             </div>
                         
                             <div class="tech-card">
                                 <i class="ph ph-check-circle fill-cyan"></i>
-                                <span>Figma</span>
+                                <span>SSD MobileNet V3</span>
+                            </div>
+                        
+                            <div class="tech-card">
+                                <i class="ph ph-check-circle fill-cyan"></i>
+                                <span>Object Detection</span>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hidden Modal for Platforms -->
+        <div id="skill-modal-5" class="modal-overlay">
+            <div class="modal-content card fade-in-up" onclick="event.stopPropagation()">
+                <button class="modal-close" aria-label="Close modal" onclick="closeModal('skill-modal-5', event)"><i class="ph ph-x"></i></button>
+                <div class="modal-header">
+                    <div class="modal-icon-large">
+                        <i class="ph ph-code"></i>
+                    </div>
+                    <h2>Platforms</h2>
+                    <p></p>
+                </div>
+                <div class="modal-body">
+                    <h4>TECHNOLOGIES & SKILLS</h4>
+                    <div class="modal-tech-grid">
+                        
+                            <div class="tech-card">
+                                <i class="ph ph-check-circle fill-cyan"></i>
+                                <span>Windows Server</span>
+                            </div>
+                        
+                            <div class="tech-card">
+                                <i class="ph ph-check-circle fill-cyan"></i>
+                                <span>Linux</span>
+                            </div>
+                        
+                            <div class="tech-card">
+                                <i class="ph ph-check-circle fill-cyan"></i>
+                                <span>Android Studio</span>
                             </div>
                         
                     </div>

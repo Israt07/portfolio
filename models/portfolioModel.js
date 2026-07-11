@@ -98,7 +98,15 @@ const portfolioData = {
         },
         {
             category: "DevOps & Tools",
-            tags: ["Git", "GitHub Actions", "Docker", "CI/CD", "JWT / OAuth2", "Firebase", "TensorFlow", "Figma"]
+            tags: ["Git", "GitHub Actions", "Docker", "CI/CD", "JWT / OAuth2", "Firebase", "Figma"]
+        },
+        {
+            category: "AI/ML",
+            tags: ["TensorFlow", "SSD MobileNet V3", "Object Detection"]
+        },
+        {
+            category: "Platforms",
+            tags: ["Windows Server", "Linux", "Android Studio"]
         }
     ],
     education: {
